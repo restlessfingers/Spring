@@ -58,6 +58,7 @@
 							<th>Pages</th>
 							<th>Year</th>
 							<th>Author</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tr th:each="book:${library}">
@@ -66,6 +67,9 @@
 						<td th:text="${book.pages}"></td>
 						<td th:text="${book.year}"></td>
 						<td th:text="${book.author}"></td>
+						 <td><a th:href="@{deleteBook(title=${book.title})}"  
+               class="w3-btn w3-teal">DELETE</a></td>
+						
 					</tr>
 				</table>
 
