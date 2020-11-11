@@ -67,14 +67,16 @@
 						<td th:text="${book.pages}"></td>
 						<td th:text="${book.year}"></td>
 						<td th:text="${book.author}"></td>
-						 <td><a th:href="@{deleteBook(title=${book.title})}"  
-               class="w3-btn w3-teal">DELETE</a></td>
-						
+						<td><a th:href="@{deleteBook(title=${book.title})}"
+							class="w3-btn w3-teal">DELETE</a></td>
+
 					</tr>
 				</table>
 
 				<form class="w3-container" action="newBook">
-					<p><button class="w3-btn w3-blue">Add</button></p>
+					<p>
+						<button class="w3-btn w3-blue">Add</button>
+					</p>
 				</form>
 
 			</div>
