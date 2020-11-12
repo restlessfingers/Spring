@@ -16,6 +16,10 @@ public class BookService {
 		
 		return repository.findAll();
 	}
+	public Iterable<Book> findById() {
+		
+		return repository.findById();
+	}
 	
 	public void insertBook(Book book) {
 		

@@ -19,7 +19,14 @@ public class BookController {
 		model.addAttribute("library", service.findAll());
 		return "books/library";
 	}
+	
+	@RequestMapping("/findBook")
+	public String showBooks(Model model) {
 
+		model.addAttribute("library", service.findById());
+		return "books/library";
+	}
+	
 	@RequestMapping("/newBook")
 	public String newBook() {
 
