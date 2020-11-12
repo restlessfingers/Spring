@@ -1,5 +1,7 @@
 # JAVA2020_spring
 
+## Dependencies
+
 **Spring Boot DevTools DEVELOPER TOOLS**
 Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
 
@@ -24,6 +26,8 @@ Highly customizable authentication and access-control framework for Spring appli
 **Lombok DEVELOPER TOOLS**
 Java annotation library which helps to reduce boilerplate code.
 
+## Versions
+
 Packaging **Jar**
 
 Java **11**
@@ -31,3 +35,5 @@ Java **11**
 Project **Maven** 
 
 Spring **2.3.5**
+
+## Branchs
