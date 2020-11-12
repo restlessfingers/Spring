@@ -40,6 +40,12 @@ Eclipse **2020-06**
 
 ## Branches
 
+- main: book
+- addH2: add JPA Data, @entity, H2 server, CRUD, lombok and security Spring
+- addUser
+- addOneToMany
+- addReservation
+
 
 ## Front-end
 
