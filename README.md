@@ -32,8 +32,10 @@ Packaging **Jar**
 
 Java **11**
 
-Project **Maven** 
+Project **Maven 4.0** 
 
-Spring **2.3.5**
+Spring **2.3.5** 
+
+Eclipse **2020-06**
 
 ## Branchs
