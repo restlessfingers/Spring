@@ -25,6 +25,9 @@ Lombok DEVELOPER TOOLS
 Java annotation library which helps to reduce boilerplate code.
 
 Packaging Jar
+
 Java 11
+
 Project Maven 
+
 Spring 2.3.5
