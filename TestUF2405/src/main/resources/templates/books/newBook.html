@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+	float: left;
+	padding: 10px;
+	/* height: 1200px;  */
+}
+
+.left {
+	width: 25%;
+}
+
+.right {
+	width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+</style>
+</head>
+
+<body>
+	<div class="w3-responsive">
+		<div class="row">
+			<div class="column">
+				<h3>Add book</h3>
+			</div>
+
+			<div class="column">
+				<h2>Form add book and some text</h2>
+				<p>The HTML template Thymeleaf recives data from model object
+					with attribute tag "quote" and uses it with "th" tags, we also
+					use CSS</p>
+
+
+				<div class="w3-card-4" style="width: 50%;">
+					<div class="w3-container w3-blue">
+						<h2>Add new book</h2>
+					</div>
+					<form class="w3-container" action="insertBook">
+						<p>
+							<label>Id</label> <input
+								class="w3-input w3-hover-light-grey" name="id"
+								type="text">
+						</p>
+						<p>
+							<label>Title</label> <input
+								class="w3-input w3-hover-light-grey" name="title" type="text">
+						</p>
+
+						<p>
+							<label>Quote</label> <input
+								class="w3-input w3-hover-light-grey" name="quote"
+								type="text">
+						</p>
+
+						<p>
+							<button class="w3-btn w3-blue">Add</button>
+						</p>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
