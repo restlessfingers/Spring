@@ -19,4 +19,8 @@ public class CreditCardService {
 		return repository.findAll();
 	}
 
+	public void insertCreditCard (CreditCard creditcard) {
+
+		repository.save(creditcard);
+	}
 }

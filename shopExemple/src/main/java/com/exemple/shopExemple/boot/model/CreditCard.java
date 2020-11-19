@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 
 @Entity
 public class CreditCard {
@@ -19,7 +22,8 @@ public class CreditCard {
 	private int loan;
 
 	@ManyToOne (fetch = FetchType.LAZY)
-	@JoinColumn(name = "CUSTOMER_ID_FK")
+	@JoinColumn(name = "CUSTOMER_ID_FK", nullable = true)
+	@JsonIgnore
 	private Customer customer;
 	
 	public CreditCard() {}

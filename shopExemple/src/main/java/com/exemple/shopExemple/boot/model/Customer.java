@@ -2,6 +2,7 @@ package com.exemple.shopExemple.boot.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.FetchType;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,6 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 public class Customer {
@@ -19,8 +24,9 @@ public class Customer {
 	private String firstName;
 	private String lastName;
 
-	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-	private List<CreditCard> creditCards = new ArrayList<CreditCard>();
+	@OneToMany(mappedBy = "customer", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@JsonIgnore
+	private List<CreditCard> creditCards;
 
 	protected Customer() {}
 
