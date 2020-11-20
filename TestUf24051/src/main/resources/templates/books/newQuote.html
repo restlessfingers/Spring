@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+	float: left;
+	padding: 10px;
+	/* height: 1200px;  */
+}
+
+.left {
+	width: 25%;
+}
+
+.right {
+	width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+</style>
+</head>
+
+
+<body>
+	<div class="w3-responsive">
+		<div class="row">
+			<div class="column">
+				<h4>Add quote</h4>
+			</div>
+
+			<div class="column">
+				<h2>Form add quote and some text</h2>
+				<p>The HTML template Thymeleaf recives data from model object
+					with attribute tag "quote" and uses it with "th" tags, we also
+					use CSS</p>
+
+
+				<div class="w3-card-4" style="width: 50%;">
+					<div class="w3-container w3-blue">
+						<h2>Add new quote</h2>
+					</div>
+					<form class="w3-container" action="insertQuote">
+
+
+	<p>
+		<label>Id</label> <input name="id"
+			type="number">
+	</p>
+	<p>
+		<label>Tag</label> <input name="tag"
+			type="text">
+	</p>
+	<p>
+		<label>Sentence</label> <input name="sentence" type="text">
+	</p>
+	<p>
+		<label>Number Words</label> <input name="numberWords"
+			type="number">
+	</p>
+	<div th:object="${book}">
+		<select id="selectBook" name="selectBook">
+			<option value="">Select Book</option>
+			<option th:each="book : ${books}" th:value="${book.id}"
+				th:text="${book.id}+' : '+${book.title}}"></option>
+		</select>
+	</div>
+	<p>
+	
+	
+	
+		<button>Add</button>
+	</p>
+</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
